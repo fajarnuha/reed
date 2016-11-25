@@ -1,0 +1,218 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a, button{
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+p, span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 999;
+	position: fixed;
+	/*box-shadow: 0px 1px 5px rgba(0,0,0,0.5);*/
+	transition: 0.3s ease-in-out;
+	
+}
+
+nav div.menuWrapper{
+	float: right;
+	position: relative;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+nav .menuWrapper a{
+	font-size: 12px;
+	margin: auto 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.navbarWhite{
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	height: 60px;
+}
+
+nav .registerButton{
+	display: inline-block;
+	background-color: turquoise;
+	padding: 10px 0;
+	border-radius: 1px;
+	z-index: 999;
+	position: relative;
+}
+
+nav .registerButton a{
+	color: white;
+}
+
+nav div.separator{
+	display: inline-block;
+	width: 2px;
+	height: 15px;
+	background-color: rgba(0,0,0,0.8);
+	position: relative;
+	top: 3px;
+}
+
+/*---------------*/
+
+div.confirmPage{
+	position: relative;
+	width: 100%;
+	height: 700px;
+	background-color: #e9eaec;
+}
+
+/*---------------*/
+
+div.confirmBox{
+	position: relative;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0px 0px 10px #333;
+}
+
+div.confirmBox hr{
+	position: relative;
+	width: 85%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+div.confirmHeader{
+	width: 100%;
+	height: 75px;
+	background-image: url('img/bg.jpg');
+	position: relative;
+}
+
+div.confirmHeader p{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 30px;
+	color: white;
+}
+
+div.confirmText p{
+	font-size: 13px;
+	padding: 20px;
+	text-align: center;
+}
+
+div.confirmDetail{
+	display: flex;
+	padding: 20px;
+}
+
+div.leftDetail{
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	padding-right: 10px;
+}
+
+div.rightDetail{
+	display: inline-block;
+	width: 70%;
+	text-align: left;
+}
+
+div.confirmDetail p{
+	font-size: 13px;
+	margin: 10px 0;
+}
+
+div.confirmButton{
+	position: relative;
+	width: 100%;
+	height: 50px;	
+	font-size: 13px;
+}
+
+div.cancel, div.agree{
+	letter-spacing: normal;
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	border-radius: 1px;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	background-color: #70efe2;
+	transform: translateY(0px);
+}
+
+div.cancel:hover, div.agree:hover{
+	transform: translateY(-5px);
+	transition: 0.3s ease-in-out;	
+	box-shadow: 0px 2px 5px black;
+}
+
+div.cancel{
+	right: 150px;
+}
+
+div.cancel p{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.agree{
+	right: 10px;
+}
+
+div.agree input{
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+
+/*---------------*/
+
+div.section7{
+	height: 50px;
+	background-color: black;
+	padding: 0 100px;
+}
+
+div.section7 div.leftContact{
+	display: inline-block;
+	float: left;
+	height: 100%;
+
+}
+
+div.section7 div.rightContact{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+
+div.section7 p{
+	font-size: 12px;
+	margin-top: 20px;
+	color: white;
+	letter-spacing: 0.5px;
+}

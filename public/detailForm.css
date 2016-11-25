@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a, button{
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+p, span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 999;
+	position: fixed;
+	/*box-shadow: 0px 1px 5px rgba(0,0,0,0.5);*/
+	transition: 0.3s ease-in-out;
+	
+}
+
+nav div.menuWrapper{
+	float: right;
+	position: relative;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+nav .menuWrapper a{
+	font-size: 12px;
+	margin: auto 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.navbarWhite{
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	height: 60px;
+}
+
+nav .registerButton{
+	display: inline-block;
+	background-color: turquoise;
+	padding: 10px 0;
+	border-radius: 1px;
+	z-index: 999;
+	position: relative;
+}
+
+nav .registerButton a{
+	color: white;
+}
+
+nav div.separator{
+	display: inline-block;
+	width: 2px;
+	height: 15px;
+	background-color: rgba(0,0,0,0.8);
+	position: relative;
+	top: 3px;
+}
+
+/*---------------*/
+
+div.detailFormPage{
+	position: relative;
+	background-color: #e9eaec;
+	padding: 100px 0 150px;
+}
+
+div.formWrapper{
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+
+div.titleAction p{
+	text-align: center;
+}
+
+div.detailText p{
+	font-size: 13px;
+	text-align: center;
+	padding: 25px;
+}
+
+div.inputBox{
+	position: relative;
+	margin: 2px 0;
+}
+
+div.inputBox form{
+	
+}
+
+div.inputBox input{
+	width: 356px;
+	padding: 20px;
+	text-align: center;
+	outline: none;
+	border-color: transparent;
+}
+
+div.inputBox input:focus{
+	transition: 0.3s ease-in-out;
+	box-shadow: 0px 0px 10px #333;
+}
+
+div.fillButton{
+	margin-top: 20px;	
+	height: 75px;
+	background-color: #70efe2;
+	overflow: hidden;
+	transform: translateY(0px);
+}
+
+div.fillButton:hover{
+	transform: translateY(-5px);
+	transition: 0.3s ease-in-out;	
+	box-shadow: 0px 2px 5px black;
+}
+
+div.fillButton input{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background-color: transparent;
+	outline: none;	
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	border-color: transparent;
+}
+
+/*---------------*/
+
+div.section7{
+	height: 50px;
+	background-color: black;
+	padding: 0 100px;
+}
+
+div.section7 div.leftContact{
+	display: inline-block;
+	float: left;
+	height: 100%;
+
+}
+
+div.section7 div.rightContact{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+
+div.section7 p{
+	font-size: 12px;
+	margin-top: 20px;
+	color: white;
+	letter-spacing: 0.5px;
+}

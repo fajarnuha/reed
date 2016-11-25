@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reed</title>
+	<link rel="icon" href="img/icon144.png">
+	<link rel="stylesheet" type="text/css" href="searchResult.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+
+<nav id="nav">
+	<div class="menuWrapper">
+		<a id="navLink" href="/">HOME</a>
+		<div class="separator"></div>
+		<a id="navLink" href="#">EXPLORE</a>
+		<div class="registerButton">
+			<a href="form.html">SIGN UP</a>
+		</div>
+	</div>
+</nav>
+
+<div class="searchBar">
+	<div class="searchBox">
+		<input type="text" name="" placeholder="cari komunitas" id="searchInput">
+		<hr>
+	</div>
+</div>
+
+<div class="columnWrapper">
+
+    <% for(var i = 0; i<loop; i++){ %>
+    <div class = "row">
+        <% for(var j = 0; j<3; j++){ %>
+        <div class="col-md-4">
+			<a href="/explore/profile?id=<%= data[i*3+j].id %>"><div class="contentResult <%= img[j]%>"></div></a>
+			<p class="commDesc">
+				<%= data[i*3+j].notes %>
+			</p>
+			<div class="separatorContent"></div>
+			<span class="bookIcon">
+				<%= data[i*3+j].owned %>
+				<a href="profil.html"><img src="img/book.png"></a>
+			</span>
+		</div>
+        <% } %>
+    </div>
+    <% } %>
+    <div class = "row">
+        <% if(remainder) { %>
+        <% for(var i=0; i<remainder; i++){ %>
+        <div class="col-md-4">
+            <a href="/explore/profile?id=<%= data[loop*3+i].id %>"><div class="contentResult result1"></div></a>
+            <p class="commDesc">
+                <%= data[loop*3+i].notes %>
+            </p>
+            <div class="separatorContent"></div>
+            <span class="bookIcon">
+                <%= data[loop*3+i].owned %>
+                <a href="profil.html"><img src="img/book.png"></a>
+            </span>
+        </div>
+        <% } %>
+        <% } %>
+    </div>
+</div>
+
+<div class="section7">
+	<div class="leftContact"><p>COPYRIGHT 2016 Jarminjingga</p></div>
+	<div class="rightContact"><p>Designed By Jarminjingga</p></div>
+</div>
+
+<script type="text/javascript">
+
+	window.onscroll = function() {
+
+	    console.log(window.pageYOffset);
+
+	    var nav = document.getElementById('nav');
+	    //var navLink = document.getElementById('navLink');
+
+	    if ( window.pageYOffset > 50 ) {
+	        nav.classList.add("navbarWhite");
+	        //navLink.classList.add("navLinkBlack");
+	    }
+	    else {
+	        nav.classList.remove("navbarWhite");
+	        //navLink.classList.remove("navLinkBlack");
+	    }
+	}
+
+	/*-----------------------------------------------------------*/
+
+</script>
+
+</body>
+</html>

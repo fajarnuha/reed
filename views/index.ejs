@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reed</title>
+	<link rel="icon" href="img/icon144.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+
+<nav id="nav">
+	<div class="menuWrapper">
+		<a id="navLink" href="#">HOME</a>
+		<!--
+		<div class="separator"></div>
+		<a id="navLink" href="#">PROFILE</a>
+		-->
+		<div class="separator"></div>
+		<a id="navLink" href="/explore">EXPLORE</a>
+		<div class="registerButton">
+			<a href="form.html">SIGN UP</a>
+		</div>
+	</div>
+</nav>
+
+<div class="section1">
+	<img id="firstBackground" src="img/header.jpg">
+	<!--
+	<button>LEARN MORE</button>
+	--><!--
+	<div class="sideBox"></div>
+	<p class="sideText"></p> -->
+</div>
+
+<div class="section2" id="toSection2">
+
+	<div class="titleBox">
+		<div class="marker"></div>
+		<p>BECOME A VOLUNTEER</p>
+	</div>
+	<div class="profileText">
+		<div class="leftText">
+			<p>
+				Want to donate books? Join us and share Your world with them.
+			</p>
+		</div>
+		<div class="rightText">
+			<p>
+				When you give someone a book, you don't give him/her just paper, ink, and glue.
+				You give them the possibility of a whole new world. We make a living by what we get,
+				but We make a life by what we give. Have you donate your book today?
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="section3">
+
+	<div class="titleBox">
+		<div class="marker"></div>
+		<p>OUR ORGANIZATIONS</p>
+	</div>
+
+	<div class="stepsWrapper">
+		<% for(var i=0; i<3; i++){ %>
+		<div class="steps">
+			<div class="organizationPic">
+				<div class="<%= img[i] %>"></div>
+			</div>
+			<div class="organization">
+				<span class="title"><%= data[i].name %></span>
+				<p><%= data[i].notes %></p>
+			</div>
+			<a class="learnMore">Learn More</a>
+		</div>
+		<% } %>
+	</div>
+</div>
+
+<div class="section4">
+
+	<span id="todayDate"></span>
+
+	<table>
+		<tr>
+			<th id="hourDate"></th>
+			<th></th>
+			<th id="minuteDate"></th>
+			<th></th>
+			<th id="secondDate"></th>
+		</tr>
+	</table>
+
+	<span id="section4SpanTop">DISCUSSING THE IMPORTANCE TODAY</span>
+	<span id="section4SpanBottom">GET THE LATEST UPDATE</span>
+
+</div>
+
+<div class="section5">
+	<div class="imageWrapper">
+		<div class="titleBox">
+			<div class="marker"></div>
+			<p>JOIN THE CIRCLE</p>
+		</div>
+		<img src="img/hands.png">
+	</div>
+	<div class="testiWrapper">
+		<div class="titleBox">
+			<div class="marker"></div>
+			<p>OUR DONORS SAY</p>
+		</div>
+		<div class="avatarWrapper">
+			<img src="img/profile.jpg">
+		</div>
+		<div class="testimony">
+			<p>Thanks to all who support the 1 Million Books For Indonesian Library and also Reed for distributing tons of books to us.
+				Hopefully these books are really beneficial for the peoples to opened their minds about the whole world.
+				(Yogyakarta City Library Team)</p>
+			<br>
+			<br>
+			<p>Michael</p>
+		</div>
+	</div>
+</div>
+
+<div class="section6">
+	<div class="contact">
+		<p>Facebook : Reed Indonesia</p>
+	</div>
+	<div class="contact">
+		<p>Twitter/Instagram : @ReedID/p>
+	</div>
+	<div class="contact">
+		<p>Email : Reed.Indonesia@gmail.com</p>
+	</div>
+	<div class="contact">
+		<p>Telp : 08123456789</p>
+	</div>
+</div>
+
+<div class="section7">
+	<div class="leftContact"><p>COPYRIGHT 2016 Jarminjingga</p></div>
+	<div class="rightContact"><p>Designed By Jarminjingga</p></div>
+</div>
+
+<script type="text/javascript">
+
+	window.onscroll = function() {
+
+	    console.log(window.pageYOffset);
+
+	    var nav = document.getElementById('nav');
+	    //var navLink = document.getElementById('navLink');
+
+	    if ( window.pageYOffset > 600 ) {
+	        nav.classList.add("navbarWhite");
+	        //navLink.classList.add("navLinkBlack");
+	    }
+	    else {
+	        nav.classList.remove("navbarWhite");
+	        //navLink.classList.remove("navLinkBlack");
+	    }
+	}
+
+	/*-----------------------------------------------------------*/
+
+	setInterval(function () {
+	  	clockFunction()
+	}, 1000);
+
+	function clockFunction() {
+
+		var today = new Date();
+		var day = today.getDay();
+		var daylist = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+		var hour = today.getHours();
+		var minute = today.getMinutes();
+		var second = today.getSeconds();
+
+		document.getElementById("todayDate").innerHTML = "TODAY IS " + daylist[day];
+		document.getElementById("hourDate").innerHTML = hour;
+		document.getElementById("minuteDate").innerHTML = minute;
+		document.getElementById("secondDate").innerHTML = second;
+
+	}
+
+	/*-----------------------------------------------------------*/
+
+	function scrollNavbar() {
+
+		var ypos, image;
+		function parallax() {
+			image = document.getElementById('firstBackground');
+			ypos = window.pageYOffset;
+			image.style.top = ypos * 0.5 + 'px';
+		}
+		window.addEventListener('scroll', parallax);
+
+	}
+
+</script>
+
+</body>
+</html>

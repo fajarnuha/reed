@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <link rel="icon" href="icon144.png">
+  <link rel="stylesheet" type="text/css" href="stylesForm.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+	<div class="menuWrapper">
+		<a href="/">HOME</a>
+		<a href="/explore">EXPLORE</a>
+	</div>
+</nav>
+
+<div class="text">
+  <h1 id="tit"> SIGN UP </h1>
+  <p align="center"><em>To become a donator/donatee you need to fill the form below. Please fill wisely.</em></p>
+</div>
+
+<div class="formWrapper">
+  <form name="simpleform" method="post">
+    <table width="500px">
+
+      <div class="form">
+        <tr>
+         <td valign="top">
+          <label for="username">Organization Name</label>
+         </td>
+         <td valign="top">
+          <input  type="text" id="name">
+         </td>
+        </tr>
+      </div>
+
+      <tr>
+       <td valign="top">
+        <label for="firstname">Location</label>
+       </td>
+       <td valign="top">
+        <input  type="text" id="location">
+       </td>
+      </tr>
+
+
+      <tr>
+       <td valign="top">
+        <label for="email">Phone Number</label>
+       </td>
+       <td valign="top">
+        <input  type="text" id="phone">
+       </td>
+      </tr>
+
+      <tr>
+       <td valign="top">
+        <label for="bday">Description</label>
+       </td>
+       <td valign="top">
+        <input  type="text" id="desc">
+       </td>
+      </tr
+
+      <tr>
+       <td colspan="2" style="text-align:center">
+        <button id="btnSign">SIGN UP</a></button>
+       </td>
+      </tr>
+
+    </table>
+  </form>
+
+</div>
+
+<div class="section6">
+	<p>CONTACT US</p>
+	<br>
+	<p>mamamia@mail.com</p>
+</div>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script>
+    $(document).ready(function(){
+        $('#btnSign').on('click', addUser);
+    });
+    function addUser(event){
+        event.preventDefault();
+        var obj = {
+            'name' : $('#name').val(),
+            'location' : $('#location').val(),
+            'phone' : $('#phone').val(),
+            'notes' : $('#desc').val()
+        };
+        window.location.assign('/explore')
+        $.ajax({
+            type : 'POST',
+            data : obj,
+            url : '/signup',
+            dataType : 'JSON'
+        }).done(function(response){
+            console.log('doone')
+            alert('nicely done!')
+        });
+    };
+</script>
+
+</body>
+</html>

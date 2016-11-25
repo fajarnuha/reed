@@ -1,0 +1,404 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a, button{
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+p, span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 999;
+	position: fixed;
+	/*box-shadow: 0px 1px 5px rgba(0,0,0,0.5);*/
+	transition: 0.5s ease-in-out;
+
+}
+
+nav div.menuWrapper{
+	float: right;
+	position: relative;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+nav .menuWrapper a{
+	font-size: 12px;
+	margin: auto 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.navbarWhite{
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	height: 60px;
+}
+
+nav .registerButton{
+	display: inline-block;
+	background-color: turquoise;
+	padding: 10px 0;
+	border-radius: 1px;
+	z-index: 999;
+	position: relative;
+}
+
+nav .registerButton a{
+	color: white;
+}
+
+nav div.separator{
+	display: inline-block;
+	width: 2px;
+	height: 15px;
+	background-color: rgba(0,0,0,0.8);
+	position: relative;
+	top: 3px;
+}
+/*---------------*/
+
+div.section1{
+	position: relative;
+	height: 680px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+
+div.section1 img{
+	width: 100%;
+}
+/*
+div.sideBox{
+	width: 33%;
+	height: 100%;
+	background-color: rgb(31,31,31);
+}
+
+p.sideText{
+	color: white;
+	font-size: 138px;
+	position: absolute;
+	top: 116px;
+	left: 191px;
+	font-family: 'Open Sans', sans-serif;
+}
+*/
+/*---------------*/
+
+div.section2{
+	padding: 150px 200px 125px;
+	background-color: #e9eaec;
+}
+
+.titleBox{
+	margin-bottom: 50px;
+	width: 98%;
+	height: 50px;
+	background-color: rgba(165,165,165,0.3);
+	position: relative;
+}
+
+.titleBox .marker{
+	display: inline-block;
+	float: left;
+	width: 15px;
+	height: 100%;
+	background-color: turquoise;
+}
+
+.titleBox p{
+	font-family: 'Open Sans', sans-serif;
+	position: absolute;
+	top: 15px;
+	left: 25px;
+}
+
+div.profileText{
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+div.leftText{
+	display: inline-block;
+	width: 49.7%;
+	background-color: white;
+	font-size: 31px;
+	float: left;
+}
+
+div.rightText{
+	display: inline-block;
+	width: 49.7%;
+	background-color: white;
+	font-size: 14px;
+}
+
+div.profileText p{
+	text-align: left;
+	margin: 100px 50px 100px 80px;
+}
+
+/*---------------*/
+
+div.section3{
+	padding: 150px 200px 150px;
+	background-color: white;
+	position: relative;
+}
+
+div.stepsWrapper{
+	width: 100%;
+	position: relative;
+}
+
+div.stepsWrapper div.steps p{
+	font-size: 14px;
+	margin: 30px 30px 0;
+}
+
+div.stepsWrapper div.steps{
+	display: inline-block;
+	width: 32%;
+	color: white;
+	border-radius: 2px;
+	transition: 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	margin: 0!important;
+	padding: 0!important;
+}
+
+div.stepsWrapper div.steps:hover{
+	box-shadow: 0px 0px 10px black;
+}
+
+div.stepsWrapper div.steps span.numbering{
+	font-size: 72px;
+	margin: 50px 30px;
+	display: block;
+}
+
+div.stepsWrapper div.steps span.title{
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 30px;
+}
+
+div.section3 div.stepsWrapper div.organizationPic{
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.org1, .org2, .org3{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	transform: scale(1);
+}
+
+.org1{
+	background-image: url('img/d.jpg');
+}
+.org2{
+	background-image: url('img/c.jpg');
+}
+.org3{
+	background-image: url('img/b.jpg');
+}
+
+/*--------------------------------------------*/
+.section3 .steps:hover > .organizationPic > .org1,
+.section3 .steps:hover > .organizationPic > .org2,
+.section3 .steps:hover > .organizationPic > .org3{
+	transition: 0.3s ease-in-out;
+	transform: scale(1.01);
+}
+/*--------------------------------------------*/
+
+div.section3 div.stepsWrapper div.organization{
+	height: 150px;
+	background-color: rgba(165,165,165,0.3);
+	padding-top: 50px;
+}
+
+div.section3 span, div.section3 div.organization p{
+	margin: 20px 30px 0;
+	color: black;
+}
+
+div.section3 div.stepsWrapper div.steps a.learnMore{
+	display: block;
+	background-color: turquoise;
+	text-align: center;
+	height: 30px;
+	padding-top: 10px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+/*---------------*/
+
+div.section4{
+	background-image: url('img/clockBg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 150px 150px 100px;
+}
+
+div.section4 span#todayDate{
+	margin: 0 auto 50px;
+	display: block;
+	text-align: center;
+	color: white;
+	font-size: 72px;
+	font-family: 'Roboto', sans-serif;
+}
+
+div.section4 table{
+	margin: 0 auto;
+}
+
+div.section4 th{
+	border: 2px solid white;
+	width: 200px;
+	height: 200px;
+	color: white;
+	font-size: 72px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+div.section4 th:nth-child(even){
+	border: 0px;
+	width: 50px;
+}
+
+div.section4 span#section4SpanTop{
+	margin: 50px auto 15px;
+	display: block;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+div.section4 span#section4SpanBottom{
+	display: block;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*---------------*/
+
+div.section5{
+	padding: 150px 100px;
+	height: 550px;
+}
+
+div.section5 div.imageWrapper{
+	display: inline-block;
+	width: 45%;
+	float: left;
+}
+
+div.section5 div.imageWrapper img{
+	width: 80%;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+div.section5 div.testiWrapper{
+	display: inline-block;
+	width: 45%;
+	float: right;
+}
+
+div.section5 div.avatarWrapper{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
+div.section5 div.testimony p{
+	text-align: center;
+	font-size: 14px;
+	margin-top: 50px;
+}
+
+div.section5 img{
+	width: 100%;
+}
+
+/*---------------*/
+
+div.section6{
+	padding: 100px 100px;
+	height: 100px;
+	background-image: url('img/footer.jpg');
+	background-size: cover;
+	background-position: bottom;
+}
+
+div.section6 div.contact{
+	width: 24%;
+	display: inline-block;
+	height: 100%;
+}
+
+div.section6 p{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+
+/*---------------*/
+
+div.section7{
+	height: 50px;
+	background-color: black;
+	padding: 0 100px;
+}
+
+div.section7 div.leftContact{
+	display: inline-block;
+	float: left;
+	height: 100%;
+
+}
+
+div.section7 div.rightContact{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+
+div.section7 p{
+	font-size: 12px;
+	margin-top: 20px;
+	color: white;
+	letter-spacing: 0.5px;
+}

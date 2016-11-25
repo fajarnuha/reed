@@ -1,0 +1,317 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a, button{
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+p, span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 999;
+	position: fixed;
+	/*box-shadow: 0px 1px 5px rgba(0,0,0,0.5);*/
+	transition: 0.3s ease-in-out;
+
+}
+
+nav div.menuWrapper{
+	float: right;
+	position: relative;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+nav .menuWrapper a{
+	font-size: 12px;
+	margin: auto 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.navbarWhite{
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	height: 60px;
+}
+
+nav .registerButton{
+	display: inline-block;
+	background-color: turquoise;
+	padding: 10px 0;
+	border-radius: 1px;
+	z-index: 999;
+	position: relative;
+}
+
+nav .registerButton a{
+	color: white;
+}
+
+nav div.separator{
+	display: inline-block;
+	width: 2px;
+	height: 15px;
+	background-color: rgba(0,0,0,0.8);
+	position: relative;
+	top: 3px;
+}
+
+/*---------------*/
+
+div.bg{
+	padding: 150px 0 100px;
+	background-image: url('../img/aRotated.jpg');
+	background-size: cover;
+	/*background-color: #e9eaec;*/
+	position: relative;
+}
+
+div.orgNameWrapper{
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	position: absolute;
+}
+
+p.orgName{
+	font-size: 24px;
+}
+
+p.orgSmallName{
+	text-align: center;
+	font-size: 13px;
+}
+
+/*---------------*/
+
+div.profilePage{
+	height: 900px;
+	position: relative;
+	background-color: #e9eaec;
+}
+
+div.bio{
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	top: -10%;
+	left: 15%;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px #333;
+}
+
+/*--------------------------------*/
+
+div.imageBox{
+	width: 100%;
+	height: 50%;
+	background-image: url('../img/a.jpg');
+	background-size: cover;
+}
+
+/*--------------------------------*/
+
+div.bioBox{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-color: white;
+}
+
+div.bioBox span{
+	font-size: 16px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	display: block;
+}
+
+div.bioBox hr{
+	position: relative;
+	margin-top:10px;
+	width:90%;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+div.bioBox p{
+	width: 90%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 13px;
+}
+
+/*--------------------------------*/
+
+div.bioMenuWrapper{
+	position: absolute;
+	width: 100%;
+	height: 90px;
+	bottom: 0;
+	/*background-color: red;*/
+}
+
+div.bioInfo{
+	height: 30px;
+	display: flex;
+	/*background-color: green;*/
+}
+
+div.leftInfo, div.rightInfo{
+	width: 50%;
+	display: inline-block;
+}
+
+div.leftInfo p{
+	margin-left: 4%;
+}
+
+div.rightInfo p{
+	padding-right: 15px;
+	text-align: right;
+}
+
+/*--------------------------------*/
+
+div.horizontalBio{
+	width: 600px;
+	height: 150px;
+	background-color: white;
+	border-radius: 1px;
+	box-shadow: 0px 0px 10px #333;
+	position: absolute;
+	left: 41%;
+	top: 5%;
+}
+
+div.titleOrg p{
+	font-size: 22px;
+}
+
+div.horContent{
+	position: absolute;
+	width: 90%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*background-color: yellow;*/
+}
+
+div.horWrapper{
+	display: flex;
+	margin-top: 10px;
+}
+
+div.horLeft{
+	width: 10%;
+	display: inline-block;
+	float: right;
+}
+
+div.horLeft img{
+	width: 100%;
+	border-radius: 50%;
+	transform: translateY(0);
+	float: right;
+}
+
+div.horLeft img:hover{
+	transform: translateY(-5px);
+	transition: 0.3s ease-in-out;
+	box-shadow: 0px 2px 5px black;
+}
+
+div.horRight{
+	width: 90%;
+	display: inline-block;
+	/*background-color: blue;*/
+}
+
+/*--------------------------------*/
+
+div.testimoni{
+	width: 600px;
+	/*background-color: lightblue;*/
+	position: absolute;
+	left: 41%;
+	top: 25%;
+}
+
+div.testimoniWrapper{
+	display: flex;
+	width: 100%;
+	height: 150px;
+	margin: 10px 0;
+}
+
+div.imageTestimoni{
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	/*background-color: blue;*/
+}
+
+div.imageTestimoni img{
+	border-radius: 50%;
+	width: 60%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+div.textTestimoni{
+	display: inline-block;
+	width: 75%;
+	height: 100%;
+	/*background-color: cyan;*/
+	font-size: 13px;
+}
+
+div.textTestimoni p{
+	width: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/*---------------*/
+
+div.section7{
+	height: 50px;
+	background-color: black;
+	padding: 0 100px;
+}
+
+div.section7 div.leftContact{
+	display: inline-block;
+	float: left;
+	height: 100%;
+
+}
+
+div.section7 div.rightContact{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+
+div.section7 p{
+	font-size: 12px;
+	margin-top: 20px;
+	color: white;
+	letter-spacing: 0.5px;
+}

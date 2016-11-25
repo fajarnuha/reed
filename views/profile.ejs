@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reed</title>
+	<link rel="icon" href="img/icon144.png">
+	<link rel="stylesheet" type="text/css" href="../profile.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+
+<nav id="nav">
+	<div class="menuWrapper">
+		<a id="navLink" href="/">HOME</a>
+		<div class="separator"></div>
+		<a id="navLink" href="/explore">EXPLORE</a>
+		<div class="registerButton">
+			<a href="../form.html">SIGN UP</a>
+		</div>
+	</div>
+</nav>
+
+<div class="bg">
+	<div class="orgNameWrapper">
+		<p class="orgName"><%= data[0].name %></p>
+		<p class="orgSmallName">One Book One Future</p>
+	</div>
+</div>
+
+<div class="profilePage">
+
+	<div class="bio">
+		<div class="imageBox"></div>
+		<div class="bioBox">
+			<p>
+				<span><%= data[0].name %></span>
+				<%= data[0].notes %>
+			</p>
+			<hr>
+			<div class="bioMenuWrapper">
+				<div class="bioInfo">
+					<div class="leftInfo"><p>BOOKS DONATED</p></div>
+					<div class="rightInfo"><p>26</p></div>
+				</div>
+				<div class="bioInfo">
+					<div class="leftInfo"><p>BOOKS OWNED</p></div>
+					<div class="rightInfo"><p><%= data[0].owned %></p></div>
+				</div>
+				<div class="bioInfo">
+					<div class="leftInfo"><p>TOTAL COLLECTION</p></div>
+					<div class="rightInfo"><p>91</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="horizontalBio">
+		<div class="horContent">
+			<div class="titleOrg"><p>One Book One Future</p></div>
+			<div class="horWrapper">
+				<div class="horRight">
+					<p><%= data[0].location %></p>
+					<p><%= data[0].phone %></p>
+				</div>
+				<div class="horLeft">
+					<a href="../detailForm.html">
+						<img src="../img/plus2.png">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="testimoni">
+		<div class="testimoniWrapper">
+			<div class="imageTestimoni">
+				<img src="../img/profile4.jpg">
+			</div>
+			<div class="textTestimoni">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<hr>
+		<div class="testimoniWrapper">
+			<div class="imageTestimoni">
+				<img src="../img/profile.jpg">
+			</div>
+			<div class="textTestimoni">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+		</div>
+		<hr>
+		<div class="testimoniWrapper">
+			<div class="imageTestimoni">
+				<img src="../img/profile3.jpg">
+			</div>
+			<div class="textTestimoni">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+</div>
+
+<div class="section7">
+	<div class="leftContact"><p>COPYRIGHT 2016 Jarminjingga</p></div>
+	<div class="rightContact"><p>Designed By Jarminjingga</p></div>
+</div>
+
+<script type="text/javascript">
+
+	window.onscroll = function() {
+
+	    console.log(window.pageYOffset);
+
+	    var nav = document.getElementById('nav');
+	    //var navLink = document.getElementById('navLink');
+
+	    if ( window.pageYOffset > 50 ) {
+	        nav.classList.add("navbarWhite");
+	        //navLink.classList.add("navLinkBlack");
+	    }
+	    else {
+	        nav.classList.remove("navbarWhite");
+	        //navLink.classList.remove("navLinkBlack");
+	    }
+	}
+
+	/*-----------------------------------------------------------*/
+
+</script>
+
+</body>
+</html>
