@@ -8,12 +8,14 @@ a, button, h1, em{
   letter-spacing: 1px;
   text-decoration: none;
 }
+
 p, span,{
   font-family: 'Open Sans', sans-serif;
 }
+
 label{
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 nav{
@@ -40,10 +42,19 @@ nav .menuWrapper a{
 }
 
 /*---------------*/
+/*
+p.bigText{
+    font-family: "Open Sans", sans-serif;
+}*/
+
+p.headerText{
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+}
 
 div.formWrapper{
-  height: 650px;
-  padding-top: 150px;
+  height: 400px;
+  padding-top: 100px;
   padding-bottom: 200px;
   position: relative;
 }
@@ -72,38 +83,79 @@ button{
   left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
-  color: white;
+  font-family: "Open Sans", sans-serif;
+  color: black;
   width: 110px;
   height: 40px;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 4px;
+  background-color: #70efe2;
+  /*border-radius: 4px;*/
+  border-color: transparent;
   cursor: pointer;
+  transform: translateY(0);
 }
 
 button:hover{
+  transform: translateY(-5px);
   transition: 0.3s ease-in-out;
-  background-color: rgba(255,255,255,0.5);
-  color: rgba(0,0,0,1);
+  box-shadow: 0px 2px 5px black;
 }
 
-h1{
+p.titleText{
   text-align : center;
   height : 1em;
-  padding-top: 6em;
+  padding-top: 8em;
   padding-bottom: 1em;
-  font-size: 32px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
  }
+
+ /*---------------*/
+
+ div.section6{
+ 	padding: 100px 100px;
+ 	height: 70px;
+ 	background-image: url('img/footer.jpg');
+ 	background-size: cover;
+ 	background-position: bottom;
+ }
+
+ div.section6 div.contact{
+ 	width: 24%;
+ 	display: inline-block;
+ 	height: 100%;
+ }
+
+ div.section6 p{
+ 	text-align: center;
+ 	font-size: 14px;
+ 	color: white;
+ }
+
 
 /*---------------*/
 
-div.section6{
-  padding: 100px 200px;
-  background-color: rgba(0,0,0,0.8);
+div.section7{
+	height: 50px;
+	background-color: black;
+	padding: 0 100px;
 }
 
-div.section6 p{
-  text-align: center;
-  font-size: 14px;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
+div.section7 div.leftContact{
+	display: inline-block;
+	float: left;
+	height: 100%;
+
+}
+
+div.section7 div.rightContact{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+
+div.section7 p{
+	font-size: 12px;
+	margin-top: 20px;
+	color: white;
+	letter-spacing: 0.5px;
 }

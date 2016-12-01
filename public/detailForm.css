@@ -21,7 +21,7 @@ nav{
 	position: fixed;
 	/*box-shadow: 0px 1px 5px rgba(0,0,0,0.5);*/
 	transition: 0.3s ease-in-out;
-	
+
 }
 
 nav div.menuWrapper{
@@ -97,7 +97,7 @@ div.inputBox{
 }
 
 div.inputBox form{
-	
+
 }
 
 div.inputBox input{
@@ -114,7 +114,7 @@ div.inputBox input:focus{
 }
 
 div.fillButton{
-	margin-top: 20px;	
+	margin-top: 20px;
 	height: 75px;
 	background-color: #70efe2;
 	overflow: hidden;
@@ -123,7 +123,7 @@ div.fillButton{
 
 div.fillButton:hover{
 	transform: translateY(-5px);
-	transition: 0.3s ease-in-out;	
+	transition: 0.3s ease-in-out;
 	box-shadow: 0px 2px 5px black;
 }
 
@@ -132,7 +132,7 @@ div.fillButton input{
 	height: 100%;
 	cursor: pointer;
 	background-color: transparent;
-	outline: none;	
+	outline: none;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	border-color: transparent;

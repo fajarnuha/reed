@@ -6,8 +6,8 @@ var db = require('../db');
 router.get('/', function(req, res, next) {
     db.get().query('SELECT * FROM org LIMIT 3', function(err, rows, fields){
         if (err) throw err;
-        var img = ['org1', 'org2', 'org3']
-        res.render('index', {img: img, data : rows})
+        console.log(rows)
+        res.render('index', {data : rows})
     })
 });
 
@@ -16,4 +16,11 @@ router.post('/signup', function(req, res, next){
         if(err) throw err;
     });
 });
+
+router.post('/subbook', function(req, res, next){
+    db.get().query('INSERT INTO submit SET ?', req.body, function(err, res){
+        if(err) throw err;
+    });
+});
+
 module.exports = router;

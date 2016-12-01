@@ -22,8 +22,10 @@
 
 <div class="searchBar">
 	<div class="searchBox">
-		<input type="text" name="" placeholder="cari komunitas" id="searchInput">
-		<hr>
+		<form action="/explore">
+			<input type="text" name="q" placeholder="cari komunitas" id="searchInput">
+			<hr>
+		</form>
 	</div>
 </div>
 
@@ -33,8 +35,9 @@
     <div class = "row">
         <% for(var j = 0; j<3; j++){ %>
         <div class="col-md-4">
-			<a href="/explore/profile?id=<%= data[i*3+j].id %>"><div class="contentResult <%= img[j]%>"></div></a>
+			<a href="/explore/profile?id=<%= data[i*3+j].id %>"><div class="contentResult" style="background-image: url('<%= data[i*3+j].image %>')"></div></a>
 			<p class="commDesc">
+				<span style="font-size:16px;display:block;padding-bottom:5px;padding-top:5px;"><%= data[i*3+j].name %></span>
 				<%= data[i*3+j].notes %>
 			</p>
 			<div class="separatorContent"></div>
@@ -50,7 +53,7 @@
         <% if(remainder) { %>
         <% for(var i=0; i<remainder; i++){ %>
         <div class="col-md-4">
-            <a href="/explore/profile?id=<%= data[loop*3+i].id %>"><div class="contentResult result1"></div></a>
+            <a href="/explore/profile?id=<%= data[loop*3+i].id %>"><div class="contentResult" style="background-image: url('<%= data[loop*3+i].image %>')"></div></a>
             <p class="commDesc">
                 <%= data[loop*3+i].notes %>
             </p>
@@ -69,6 +72,7 @@
 	<div class="leftContact"><p>COPYRIGHT 2016 Jarminjingga</p></div>
 	<div class="rightContact"><p>Designed By Jarminjingga</p></div>
 </div>
+
 
 <script type="text/javascript">
 

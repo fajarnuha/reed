@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reed</title>
+	<link rel="icon" href="img/icon144.png">
+	<link rel="stylesheet" type="text/css" href="../detailForm.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+<datalist id="orgname">
+	<% for(var i = 0; i<acsource.length; i++){ %>
+	<option value="<%= acsource[i].name %>">
+	<% } %>
+</datalist>
+<nav id="nav">
+	<div class="menuWrapper">
+		<a id="navLink" href="/">HOME</a>
+		<div class="separator"></div>
+		<a id="navLink" href="/explore">EXPLORE</a>
+		<div class="registerButton">
+			<a href="/form.html">SIGN UP</a>
+		</div>
+	</div>
+</nav>
+
+<div class="detailFormPage">
+	<div class="formWrapper">
+		<div class="titleAction">
+			<p><b>DETAILS INFORMATION</b></p>
+		</div>
+		<div class="detailText">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+		<div class="inputBox">
+			<form>
+				<input type="" id="tujuan" placeholder="ORG NAME" list="orgname">
+			</form>
+		</div>
+		<div class="inputBox">
+			<form>
+				<input type="" id="name" placeholder="NAME">
+			</form>
+		</div>
+		<div class="inputBox">
+			<input type="" id="address" placeholder="ADDRESS">
+		</div>
+		<div class="inputBox">
+			<input type="" id="contact" placeholder="CONTACT">
+		</div>
+		<div class="inputBox">
+			<input type="" id="email" placeholder="EMAIL">
+		</div>
+		<div class="inputBox">
+			<input type="" id="books" placeholder="BOOKS TITLE">
+		</div>
+		<div class="fillButton">
+			<input type="submit" id="btnSign" value="SUBMIT">
+		</div>
+	</div>
+</div>
+<div id="idorg"> <%= id %> </div>
+<div class="section7">
+	<div class="leftContact"><p>COPYRIGHT 2016 Jarminjingga</p></div>
+	<div class="rightContact"><p>Designed By Jarminjingga</p></div>
+</div>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btnSign').on('click', subApply);
+	});
+
+	function subApply(event){
+		event.preventDefault();
+        var obj = {
+            'name' : $('#name').val(),
+            'address' : $('#address').val(),
+            'contact' : $('#contact').val(),
+            'email' : $('#email').val(),
+			'books' : $('#books').val(),
+			'org' : $('#idorg').html()
+        };
+        window.location.assign('/explore')
+        $.ajax({
+            type : 'POST',
+            data : obj,
+            url : '../subbook',
+            dataType : 'JSON'
+        }).done(function(response){
+            console.log('doone')
+            alert('nicely done!')
+        });
+	}
+	window.onscroll = function() {
+
+	    console.log(window.pageYOffset);
+
+	    var nav = document.getElementById('nav');
+	    //var navLink = document.getElementById('navLink');
+
+	    if ( window.pageYOffset > 50 ) {
+	        nav.classList.add("navbarWhite");
+	        //navLink.classList.add("navLinkBlack");
+	    }
+	    else {
+	        nav.classList.remove("navbarWhite");
+	        //navLink.classList.remove("navLinkBlack");
+	    }
+	}
+
+	/*-----------------------------------------------------------*/
+
+</script>
+
+</body>
+</html>

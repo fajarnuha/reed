@@ -11,13 +11,13 @@
 
 <nav id="nav">
 	<div class="menuWrapper">
-		<a id="navLink" href="#">HOME</a>
+		<a id="navLink1" href="#">HOME</a>
 		<!--
 		<div class="separator"></div>
 		<a id="navLink" href="#">PROFILE</a>
 		-->
-		<div class="separator"></div>
-		<a id="navLink" href="/explore">EXPLORE</a>
+		<div id="separator" class="separator"></div>
+		<a id="navLink2" href="/explore">EXPLORE</a>
 		<div class="registerButton">
 			<a href="form.html">SIGN UP</a>
 		</div>
@@ -65,8 +65,8 @@
 	<div class="stepsWrapper">
 		<% for(var i=0; i<3; i++){ %>
 		<div class="steps">
-			<div class="organizationPic">
-				<div class="<%= img[i] %>"></div>
+			<div class="organizationPic" style="background-image: url('<%= data[i].image %>')">
+				<div class="org"></div>
 			</div>
 			<div class="organization">
 				<span class="title"><%= data[i].name %></span>
@@ -155,10 +155,16 @@
 
 	    if ( window.pageYOffset > 600 ) {
 	        nav.classList.add("navbarWhite");
+			document.getElementById("navLink1").style.color = "black";
+			document.getElementById("navLink2").style.color = "black";
+			document.getElementById("separator").style.backgroundColor = "black";
 	        //navLink.classList.add("navLinkBlack");
 	    }
 	    else {
 	        nav.classList.remove("navbarWhite");
+			document.getElementById("navLink1").style.color = "white";
+			document.getElementById("navLink2").style.color = "white";
+			document.getElementById("separator").style.backgroundColor = "white";
 	        //navLink.classList.remove("navLinkBlack");
 	    }
 	}
